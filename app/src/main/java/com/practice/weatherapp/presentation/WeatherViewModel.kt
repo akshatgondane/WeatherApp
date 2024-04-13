@@ -1,6 +1,5 @@
 package com.practice.weatherapp.presentation
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.practice.weatherapp.domain.location.LocationTracker
@@ -49,8 +48,6 @@ class WeatherViewModel @Inject constructor(
                 )
             }
             locationTracker.getCurrentLocation()?.let { location ->
-                Log.d("CustomTag", "lat: ${location.latitude}")
-                Log.d("CustomTag", "lon: ${location.longitude}")
                 when (val result =
                     repository.getWeatherData(location.latitude, location.longitude)) {
                     is Resource.Success -> {
