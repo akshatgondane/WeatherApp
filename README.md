@@ -1,4 +1,4 @@
-# Crypto Wallet
+# Weather App
 
 ## Description:
 ’Weather app’ is a mobile application based on Native Android which shows the current and upcoming weather info at user's current location. 
